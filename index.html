@@ -1,0 +1,655 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/granulate.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+<div class="particle-network-animation"></div>
+ 
+<div id="header">
+  
+  <svg width="186" height="96" viewBox="0 0 31 16" class="logo" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10.7656 2.4179H12.4518C12.6766 2.4179 12.8606 2.24074 12.8606 2.02421V0.400268C12.8606 0.183742 12.6766 0.00658369 12.4518 0.00658369H10.7656C10.5408 0.00658369 10.3568 0.183742 10.3568 0.400268V2.02421C10.3568 2.24074 10.5408 2.4179 10.7656 2.4179ZM10.7656 6.84684H12.4518C12.6766 6.84684 12.8606 6.66969 12.8606 6.45316V4.82921C12.8606 4.61269 12.6766 4.43553 12.4518 4.43553H10.7656C10.5408 4.43553 10.3568 4.61269 10.3568 4.82921V6.45316C10.3568 6.66969 10.5408 6.84684 10.7656 6.84684ZM16.9841 4.43553H15.2979C15.0731 4.43553 14.8891 4.61269 14.8891 4.82921V6.45316C14.8891 6.66969 15.0731 6.84684 15.2979 6.84684H16.9841C17.2089 6.84684 17.3929 6.66969 17.3929 6.45316V4.82921C17.3929 4.61269 17.2089 4.43553 16.9841 4.43553ZM21.5215 4.43553H19.8353C19.6105 4.43553 19.4265 4.61269 19.4265 4.82921V6.45316C19.4265 6.66969 19.6105 6.84684 19.8353 6.84684H21.5215C21.7463 6.84684 21.9303 6.66969 21.9303 6.45316V4.82921C21.9303 4.61269 21.7463 4.43553 21.5215 4.43553ZM26.0589 4.43553H24.3727C24.1479 4.43553 23.9639 4.61269 23.9639 4.82921V6.45316C23.9639 6.66969 24.1479 6.84684 24.3727 6.84684H26.0589C26.2837 6.84684 26.4677 6.66969 26.4677 6.45316V4.82921C26.4677 4.61269 26.2837 4.43553 26.0589 4.43553ZM16.9841 0.00658369H15.2979C15.0731 0.00658369 14.8891 0.183742 14.8891 0.400268V2.02421C14.8891 2.24074 15.0731 2.4179 15.2979 2.4179H16.9841C17.2089 2.4179 17.3929 2.24074 17.3929 2.02421V0.400268C17.3929 0.183742 17.2089 0.00658369 16.9841 0.00658369ZM21.5215 0.00658369H19.8353C19.6105 0.00658369 19.4265 0.183742 19.4265 0.400268V2.02421C19.4265 2.24074 19.6105 2.4179 19.8353 2.4179H21.5215C21.7463 2.4179 21.9303 2.24074 21.9303 2.02421V0.400268C21.9303 0.183742 21.7463 0.00658369 21.5215 0.00658369ZM30.5912 0.00658369H28.905C28.6802 0.00658369 28.4962 0.183742 28.4962 0.400268V2.02421C28.4962 2.24074 28.6802 2.4179 28.905 2.4179H30.5912C30.8161 2.4179 31 2.24074 31 2.02421V0.400268C31 0.183742 30.8161 0.00658369 30.5912 0.00658369ZM26.0589 0.00658369H24.3727C24.1479 0.00658369 23.9639 0.183742 23.9639 0.400268V2.02421C23.9639 2.24074 24.1479 2.4179 24.3727 2.4179H26.0589C26.2837 2.4179 26.4677 2.24074 26.4677 2.02421V0.400268C26.4677 0.183742 26.2837 0.00658369 26.0589 0.00658369ZM16.9841 8.91369H15.2979C15.0731 8.91369 14.8891 9.09084 14.8891 9.30737V10.9313C14.8891 11.1478 15.0731 11.325 15.2979 11.325H16.9841C17.2089 11.325 17.3929 11.1478 17.3929 10.9313V9.30737C17.3929 9.09084 17.2089 8.91369 16.9841 8.91369ZM21.5368 8.92353H19.8506C19.6258 8.92353 19.4419 9.10068 19.4419 9.31721V10.9412C19.4419 11.1577 19.6258 11.3348 19.8506 11.3348H21.5368C21.7617 11.3348 21.9456 11.1577 21.9456 10.9412V9.31721C21.9456 9.10068 21.7617 8.92353 21.5368 8.92353ZM16.9841 13.5887H15.2979C15.0731 13.5887 14.8891 13.7658 14.8891 13.9824V15.6063C14.8891 15.8228 15.0731 16 15.2979 16H16.9841C17.2089 16 17.3929 15.8228 17.3929 15.6063V13.9824C17.3929 13.7658 17.2089 13.5887 16.9841 13.5887ZM8.31293 10.6951C8.31804 10.7738 8.31804 10.8575 8.31804 10.9362C8.31804 11.3791 8.05744 11.4726 7.64867 11.3939C5.96757 11.0691 4.68503 9.61248 4.67992 8.02298C4.67482 6.30061 5.89093 4.85874 7.62312 4.51427C7.72531 4.49458 7.81218 4.48474 7.89393 4.48966C7.89393 4.48966 7.89904 4.48966 7.91437 4.48966C7.9859 4.49458 8.26183 4.51919 8.31293 4.81445C8.31293 4.81937 8.31293 4.81937 8.31293 4.82429V6.42856V6.67461C8.31293 6.67461 8.30782 6.87637 7.96547 7.024L7.92458 7.04369L7.618 7.19132C7.61289 7.19624 7.60779 7.19624 7.60268 7.20116C6.94864 7.50626 7.00484 8.43635 7.68443 8.76114C7.76619 8.8005 7.83772 8.83987 7.89904 8.88416C8.32825 9.0564 8.31293 9.34181 8.31293 9.34181V9.44516V9.46977V9.49929V9.69613V9.78964V10.6951ZM7.67933 15.9459C7.38808 15.9311 6.75447 15.877 5.94203 15.6309C4.14853 15.1585 2.44699 13.9627 1.33307 12.3043C0.776114 11.4776 0.367343 10.5376 0.162954 9.51405C-0.342906 6.94526 0.336687 4.65205 2.09442 2.67379C3.52514 1.06461 5.41062 0.27724 7.5618 0.0115035C8.01146 -0.042628 8.28738 0.0853229 8.26183 0.58727C8.24139 0.985875 8.23628 1.3894 8.26183 1.788C8.29249 2.25058 8.13409 2.45727 7.6129 2.51632C4.83322 2.84111 3.15213 4.61761 2.63094 6.9305C1.99734 9.75026 4.02588 12.9342 7.15813 13.3623C7.16324 13.3623 7.16325 13.3623 7.16836 13.3623L8.2976 13.3672L10.0502 13.3722C10.132 13.3623 10.2955 13.3229 10.3517 13.1458C10.3568 13.131 10.3568 13.1163 10.3568 13.1015L10.3517 13.0966V11.6498L10.3568 11.7187C10.3568 11.5169 10.3568 11.3152 10.3568 11.1134V9.42056C10.3568 9.38119 10.3517 9.3369 10.367 9.30245C10.3824 9.10069 10.5612 8.93829 10.7758 8.93829H12.462C12.6868 8.93829 12.8708 9.11545 12.8708 9.33198V10.8132V10.9559V15.3553C12.8708 15.3701 12.8657 15.3849 12.8657 15.3996C12.8452 15.6801 12.7482 15.8425 12.5335 15.9163C12.4927 15.9311 12.4518 15.9459 12.4109 15.9508H11.3225C10.2086 15.9409 9.09983 15.9508 7.98591 15.9508C7.9808 15.9508 7.97057 15.9508 7.96547 15.9508H7.67933V15.9459Z" fill="url(#paint0_linear)" />
+      <defs>
+        <linearGradient id="paint0_linear" x1="8.06419" y1="0.783784" x2="13.7708" y2="17.9369" gradientUnits="userSpaceOnUse">
+          <stop offset="0.0706488" stop-color="#FCBB0B"/>
+          <stop offset="1" stop-color="#F3851C"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  
+  
+  <div class="hero">
+  </div>
+</div>
+<div class="main">
+</div>
+
+<div id="video-overlay" class="video-overlay">
+  <a class="video-overlay-close">&times;</a>
+</div>
+			<div class="slides">
+				<section  data-transition="zoom">
+          <p class="">Design Systems</p>
+          <small class="secondary">for the rest of us</small>
+        </section>
+				<section  data-transition="zoom">
+          <small>About me</small>
+          <h3>Sergey Lukin</h3>
+          <p><small>Software Engineer <span class="secondary">@ Granulate</span></small></p>
+          <p><small>ex AppOps engineer, Backend/Frontend engineer</small></p>
+          <p><small>UI/UX/DS enthusiast</small></p>
+        </section>
+				<section  data-transition="zoom"  data-transition-speed="slow">
+            <small class="secondary">What we'll cover</small>
+            <h5><small>Design Systems buzzword</small></h5>
+            <h5><small>A bit of history</small></h5>
+            <h5><small>Buttons are easy, right?</small></h5>
+            <h5><small>Designers and Developers</small></h5>
+            <h5><small>Scales vs px</small></h5>
+            <h5><small>Tooling</small></h5>
+        </section>
+        <section>
+          <p>The internet was not originally
+intended to host large-scale social
+and enterprise applications.</p>
+        </section>
+        <section>
+          <p>Yet much of the terminology we've coined in regards to web development has its roots in printed books.</p>
+        </section>
+        <section>
+          <p>This era is long gone.</p>
+        </section>
+        <section>
+          <p>We don't develop websites as full pages anymore. When we associate websites with the concept of pages, we throw re-usability out the window.</p>
+        </section>
+        <section>
+          <p>So term Design systems was born</p>
+        </section>
+        <section>
+          <section>
+            <small class="secondary">So what is a Design System?</small>
+          </section>
+          <section>
+          <p>There is no industry definition for a design system, which can
+          make it a bit tricky to understand.</p>
+          </section>
+          <section>
+          <p>If you hear a designer say design system, they're most likely
+          referring to the design language and UI Kit.</p>
+          </section>
+          <section>
+          <p>If you hear a developer say design system, they're probably referring to the component library or style guide.</p>
+          </section>
+          <section>
+          <p>But a design system encompasses all of these things: design
+          language, UI Kit, component library, and style guide.</p>
+          </section>
+          <section>
+          <p>Let's dive in</p>
+          </section>
+        </section>
+        <section>
+          <p>In the beginning there was pure CSS and HTML</p>
+            <img src="/img/yahoo.jpeg" />
+        </section>
+        <section>
+          <p>Then, UI patterns were DEFINED (common vocabulary)</p>
+            <img src="/img/patterns.png" />
+        </section>
+        <section>
+          <p>This framework is the bomb!! (ui components libraries)</p>
+        </section>
+        <section>
+          <section>
+            <p class="secondary">And then...</p>
+          </section>
+          <section>
+            <p>Brad Frost introduced <a
+                                       href="https://bradfrost.com/blog/post/atomic-web-design/">atomic design principles</a>..BOOM</p>
+            <img src="/img/atomic.png" />
+          </section>
+          <section>
+            <p class="secondary">And that's the last NEWS in the industry :)</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <p>So let's look at atom, button.</p>
+            <p>Buttons, they're easy right?</p>
+          </section>
+          <section style="background-color: white">
+            <img src="/img/button1.png" />
+          </section>
+          <section style="background-color: white">
+            <img src="/img/button2.png" />
+          </section>
+          <section style="background-color: white">
+            <img src="/img/button3.png" />
+          </section>
+          <section style="background-color: white">
+            <img src="/img/button4.png" />
+          </section>
+          <section style="background-color: white">
+            <img src="/img/button5.png" />
+          </section>
+          <section style="background-color: white">
+            <img src="/img/button6.png" />
+          </section>
+        </section>
+        <section>
+          <section  data-transition="slide"  data-transition-speed="slow">
+            <p class="secondary">Designers & Developers</p>
+          </section>
+          <section  data-transition="slide"  data-transition-speed="slow">
+              <p class="secondary">Designer</p>
+            <ul>
+              <li>Figma</li>
+              <li>Sketch</li>
+              <li>Photoshop</li>
+            </ul>
+            </section>
+            <section>
+              <p class="secondary">Developer</p>
+              <ul>
+              <li>React.js</li>
+              <li>Angular</li>
+              <li>Plain HTML/CSS</li>
+              <li>You name it</li>
+            </ul>
+          </section>
+          <section  data-transition="zoom"  data-transition-speed="slow">
+            <p>How to produce high quality consistent results?</p>
+          </section>
+        </section>
+        <section data-transition="slide">
+          <section  data-transition="slide"  data-transition-speed="slow">
+            <img src="/img/before.png" />
+          </section>
+          <section  data-transition="zoom"  data-transition-speed="slow">
+            <p>Welcome new concept - <span class="secondary">themes</span></p>
+          </section>
+          <section  data-transition="slide"  data-transition-speed="slow">
+            <img src="/img/after.png" />
+          </section>
+        </section>
+        <section>
+          <p>Having hard-coded values across the site makes it nearly impossible to maintain consistency. There’s no way to constrain the number of styles, and there’s no shared language between designers and developers.</p>
+        </section>
+        <section>
+          <p>So <span class="secondary">design tokens</span> were introduced</p>
+        </section>
+        <section>
+          <p>Design Systems at <span class="secondary">Granulate</span></p>
+        </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+
+/**
+ * Particle Network Animation
+ * Inspiration: https://github.com/JulianLaval/canvas-particle-network
+*/
+
+(function() {
+
+	var ParticleNetworkAnimation, PNA;
+	ParticleNetworkAnimation = PNA = function() {};
+
+	PNA.prototype.init = function(element) {
+		this.$el = $(element);
+
+		this.container = element;
+		this.canvas = document.createElement('canvas');
+		this.sizeCanvas();
+		this.container.appendChild(this.canvas);
+		this.ctx = this.canvas.getContext('2d');
+		this.particleNetwork = new ParticleNetwork(this);
+
+		this.bindUiActions();
+
+		return this;
+	};
+
+	PNA.prototype.bindUiActions = function() {
+		$(window).on('resize', function() {
+			// this.sizeContainer();
+/*			this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+			this.sizeCanvas();
+			this.particleNetwork.createParticles();*/
+		}.bind(this));
+	};
+
+	PNA.prototype.sizeCanvas = function() {
+		this.canvas.width = this.container.offsetWidth;
+		this.canvas.height = this.container.offsetHeight;
+	};
+
+	var Particle = function(parent, x, y) {
+		this.network = parent;
+		this.canvas = parent.canvas;
+		this.ctx = parent.ctx;
+		this.particleColor = returnRandomArrayitem(this.network.options.particleColors);
+		this.radius = getLimitedRandom(1.5, 2.5);
+		this.opacity = 0;
+		this.x = x || Math.random() * this.canvas.width;
+		this.y = y || Math.random() * this.canvas.height;
+		this.velocity = {
+			x: (Math.random() - 0.5) * parent.options.velocity,
+			y: (Math.random() - 0.5) * parent.options.velocity
+		};
+	};
+
+	Particle.prototype.update = function() {
+		if (this.opacity < 1) {
+			this.opacity += 0.01;
+		} else {
+			this.opacity = 1;
+		}
+		// Change dir if outside map
+		if (this.x > this.canvas.width + 100 || this.x < -100) {
+			this.velocity.x = -this.velocity.x;
+		}
+		if (this.y > this.canvas.height + 100 || this.y < -100) {
+			this.velocity.y = -this.velocity.y;
+		}
+
+		// Update position
+		this.x += this.velocity.x;
+		this.y += this.velocity.y;
+	};
+
+	Particle.prototype.draw = function() {
+		// Draw particle
+		this.ctx.beginPath();
+		this.ctx.fillStyle = this.particleColor;
+		this.ctx.globalAlpha = this.opacity;
+		this.ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+		this.ctx.fill();
+	};
+
+	var ParticleNetwork = function(parent) {
+		this.options = {
+			velocity: 1, // the higher the faster
+			density: 5500, // the lower the denser
+			netLineDistance: 200,
+			netLineColor: '#929292',
+			particleColors: ["#F2994A","#EAA640","#F2C94C","#FECC07","#F47B20"] // ['#6D4E5C', '#aaa', '#FFC458' ]
+		};
+		this.canvas = parent.canvas;
+		this.ctx = parent.ctx;
+    
+		this.init();
+    
+    
+    var ctx = this.ctx
+
+
+    // add resize event
+  /*  var resize = () => {
+      this.canvas.width   = window.innerWidth;
+      this.canvas.height  = window.innerHeight; 
+      ctx            = this.canvas.getContext("2d"); 
+    }*/
+     this.posX = window.innerWidth / 2;
+    if (this.posX < 100) this.posX = 100;
+      this.posY = window.innerHeight / 2;
+    // add mouse event. Because it is full screen no need to bother with offsets
+    var mouse = (event) => {
+      this.posX = event.clientX;
+      this.posY = event.clientY;
+    }
+    // incase the canvas size is changed
+//    window.addEventListener("resize",resize);
+
+    // listen to the mouse move
+    var header = document.querySelector('.reveal')
+    header.addEventListener("mousemove",mouse)
+
+    // Call resize as that gets our context
+//    resize();
+
+ /*
+    // the update function
+    var update = () => {
+         // define the gradient
+      var cirRadius = 300;
+
+      var posX = 100; // this will be set by the mouse
+      var posY = 100;
+      var RGB = [4,17,72] ; // black any values from 0 to 255
+      var alphas = [0,0,0.2,0.5,0.9,0.95,1]; // zero is transparent one is not
+
+      if(ctx){  // make sure all is in order..
+
+
+        // create gradient
+        var grad = ctx.createRadialGradient(posX,posY,0,posX,posY,cirRadius);
+        // add colour stops
+        var len = alphas.length-1;
+        alphas.forEach((a,i) => {
+          grad.addColorStop(i/len, `rgba(${RGB[0]}, ${RGB[1]}, ${RGB[2]},${a})`);
+        });
+        // set fill style to gradient
+        ctx.fillStyle = grad;
+        // render that gradient
+        ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
+      }
+      requestAnimationFrame(update); // keep doing it till cows come home.
+
+    }
+    // start it all happening;
+    requestAnimationFrame(update);*/
+
+	};
+
+	ParticleNetwork.prototype.init = function() {
+		// Create particle objects
+		this.createParticles(true);
+
+		// Update canvas
+		this.animationFrame = requestAnimationFrame(this.update.bind(this));
+
+		this.bindUiActions();
+	};
+
+	ParticleNetwork.prototype.createParticles = function(isInitial) {
+		// Initialise / reset particles
+		var me = this;
+		this.particles = [];
+		var quantity = this.canvas.width * this.canvas.height / this.options.density;
+
+		if (isInitial) {
+      
+			var counter = 0;
+			clearInterval(this.createIntervalId);
+			this.createIntervalId = setInterval(function() {
+				if (counter < quantity - 1) {
+					// Create particle object
+					this.particles.push(new Particle(this));
+				}
+				else {
+					clearInterval(me.createIntervalId);
+				}
+				counter++;
+			}.bind(this), 0);
+		}
+		else {
+			// Create particle objects
+			for (var i = 0; i < quantity; i++) {
+				this.particles.push(new Particle(this));
+			}
+		}
+	};
+
+	ParticleNetwork.prototype.createInteractionParticle = function() {
+		// Add interaction particle
+		this.interactionParticle = new Particle(this);
+		this.interactionParticle.velocity = {
+			x: 0,
+			y: 0
+		};
+		this.particles.push(this.interactionParticle);
+		return this.interactionParticle;
+	};
+
+	ParticleNetwork.prototype.removeInteractionParticle = function() {
+		// Find it
+		var index = this.particles.indexOf(this.interactionParticle);
+		if (index > -1) {
+			// Remove it
+			this.interactionParticle = undefined;
+			this.particles.splice(index, 1);
+		}
+	};
+
+	ParticleNetwork.prototype.update = function() {
+		if (this.canvas) {
+
+			this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+			this.ctx.globalAlpha = 1;
+
+			// Draw connections
+			for (var i = 0; i < this.particles.length; i++) {
+				for (var j = this.particles.length - 1; j > i; j--) {
+					var distance, p1 = this.particles[i], p2 = this.particles[j];
+
+					// check very simply if the two points are even a candidate for further measurements
+					distance = Math.min(Math.abs(p1.x - p2.x), Math.abs(p1.y - p2.y));
+					if (distance > this.options.netLineDistance) {
+						continue;
+					}
+
+					// the two points seem close enough, now let's measure precisely
+					distance = Math.sqrt(
+						Math.pow(p1.x - p2.x, 2) +
+						Math.pow(p1.y - p2.y, 2)
+					);
+					if (distance > this.options.netLineDistance) {
+						continue;
+					}
+
+					this.ctx.beginPath();
+					this.ctx.strokeStyle = this.options.netLineColor;
+					this.ctx.globalAlpha = (this.options.netLineDistance - distance) / this.options.netLineDistance * p1.opacity * p2.opacity;
+					this.ctx.lineWidth = 0.7;
+					this.ctx.moveTo(p1.x, p1.y);
+					this.ctx.lineTo(p2.x, p2.y);
+					this.ctx.stroke();
+				}
+			}
+
+			// Draw particles
+			for (var i = 0; i < this.particles.length; i++) {
+				this.particles[i].update();
+				this.particles[i].draw();
+			}
+      
+      var cirRadius = window.innerWidth / 4;
+      if (cirRadius < 400) cirRadius = 400;
+      var posX = this.posX; // this will be set by the mouse
+      var posY = this.posY;
+      var RGB = [4,17,72] ; // black any values from 0 to 255
+      var alphas = [0,0,0.2,0.5,0.9,0.95,1]; // zero is transparent one is not
+
+      // create gradient
+      var grad = this.ctx.createRadialGradient(posX,posY,0,posX,posY,cirRadius);
+      // add colour stops
+      var len = alphas.length-1;
+      alphas.forEach((a,i) => {
+        grad.addColorStop(i/len, `rgba(${RGB[0]}, ${RGB[1]}, ${RGB[2]},${a})`);
+      });
+      // set fill style to gradient
+      this.ctx.fillStyle = grad;
+      // render that gradient
+      this.ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
+
+
+			if (this.options.velocity !== 0) {
+				this.animationFrame = requestAnimationFrame(this.update.bind(this));
+			}
+      
+      
+
+		}
+		else {
+			cancelAnimationFrame(this.animationFrame);
+		}
+	};
+
+	ParticleNetwork.prototype.bindUiActions = function() {
+		// Mouse / touch event handling
+		this.spawnQuantity = 3;
+		this.mouseIsDown = false;
+		this.touchIsMoving = false;
+
+		this.onMouseMove = function(e) {
+			if (!this.interactionParticle) {
+				this.createInteractionParticle();
+			}
+			this.interactionParticle.x = e.offsetX;
+			this.interactionParticle.y = e.offsetY;
+		}.bind(this);
+
+		this.onTouchMove = function(e) {
+			e.preventDefault();
+			this.touchIsMoving = true;
+			if (!this.interactionParticle) {
+				this.createInteractionParticle();
+			}
+			this.interactionParticle.x = e.changedTouches[0].clientX;
+			this.interactionParticle.y = e.changedTouches[0].clientY;
+		}.bind(this);
+
+		this.onMouseDown = function(e) {
+			this.mouseIsDown = true;
+			var counter = 0;
+			var quantity = this.spawnQuantity;
+			var intervalId = setInterval(function() {
+				if (this.mouseIsDown) {
+					if (counter === 1) {
+						quantity = 1;
+					}
+					for (var i = 0; i < quantity; i++) {
+						if (this.interactionParticle) {
+							this.particles.push(new Particle(this, this.interactionParticle.x, this.interactionParticle.y));
+						}
+					}
+				}
+				else {
+					clearInterval(intervalId);
+				}
+				counter++;
+			}.bind(this), 50);
+		}.bind(this);
+
+		this.onTouchStart = function(e) {
+			e.preventDefault();
+			setTimeout(function() {
+				if (!this.touchIsMoving) {
+					for (var i = 0; i < this.spawnQuantity; i++) {
+						this.particles.push(new Particle(this, e.changedTouches[0].clientX, e.changedTouches[0].clientY));
+					}
+				}
+			}.bind(this), 200);
+		}.bind(this);
+
+		this.onMouseUp = function(e) {
+			this.mouseIsDown = false;
+		}.bind(this);
+
+		this.onMouseOut = function(e) {
+			this.removeInteractionParticle();
+		}.bind(this);
+
+		this.onTouchEnd = function(e) {
+			e.preventDefault();
+			this.touchIsMoving = false;
+			this.removeInteractionParticle();
+		}.bind(this);
+
+	//	this.canvas.addEventListener('mousemove', this.onMouseMove);
+		//this.canvas.addEventListener('touchmove', this.onTouchMove);
+		//this.canvas.addEventListener('mousedown', this.onMouseDown);
+		//this.canvas.addEventListener('touchstart', this.onTouchStart);
+//		this.canvas.addEventListener('mouseup', this.onMouseUp);
+	//	this.canvas.addEventListener('mouseout', this.onMouseOut);
+		//this.canvas.addEventListener('touchend', this.onTouchEnd);
+	};
+
+	ParticleNetwork.prototype.unbindUiActions = function() {
+		if (this.canvas) {
+			this.canvas.removeEventListener('mousemove', this.onMouseMove);
+			this.canvas.removeEventListener('touchmove', this.onTouchMove);
+			this.canvas.removeEventListener('mousedown', this.onMouseDown);
+			this.canvas.removeEventListener('touchstart', this.onTouchStart);
+			this.canvas.removeEventListener('mouseup', this.onMouseUp);
+			this.canvas.removeEventListener('mouseout', this.onMouseOut);
+			this.canvas.removeEventListener('touchend', this.onTouchEnd);
+		}
+	};
+
+	var getLimitedRandom = function(min, max, roundToInteger) {
+		var number = Math.random() * (max - min) + min;
+		if (roundToInteger) {
+			number = Math.round(number);
+		}
+		return number;
+	};
+
+	var returnRandomArrayitem = function(array) {
+		return array[Math.floor(Math.random()*array.length)];
+	};
+
+pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[0]);
+
+}());
+
+
+
+
+
+var wow = new WOW({
+    boxClass:     'wow',
+    animateClass: 'animate__animated',
+    offset:       200,
+    mobile:       true,
+    live:         true
+})
+wow.init();
+
+
+
+
+
+$('#play-video').on('click', function(e){
+  e.preventDefault();
+  $('#video-overlay').addClass('open');
+  $("#video-overlay").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/GI2MMCW-U-E" frameborder="0" allowfullscreen></iframe>');
+});
+
+$('.video-overlay, .video-overlay-close').on('click', function(e){
+  e.preventDefault();
+  close_video();
+});
+
+$(document).keyup(function(e){
+  if(e.keyCode === 27) { close_video(); }
+});
+
+function close_video() {
+  $('.video-overlay.open').removeClass('open').find('iframe').remove();
+};
+		</script>
+	</body>
+</html>
