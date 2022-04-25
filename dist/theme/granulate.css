@@ -34,7 +34,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading3-size: 1.3em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #42affa;
+  --r-link-color: green;
   --r-link-color-dark: #068de9;
   --r-link-color-hover: #8dcffc;
   --r-selection-background-color: #bee4fd;
@@ -382,9 +382,10 @@ body {
 }
 
 .logo {
-  width: 50px;
-  margin-top: 0.5rem;
-  margin-left: 2rem;
+  position: absolute;
+  width: 150px;
+  bottom: 0.5rem;
+  left: 2rem;
   position: fixed;
 }
 
@@ -795,4 +796,11 @@ body.theme-dark .core-header .core-nav .btn-nav-menu.icon-menu {
   background:transparent;
   background: linear-gradient(to right, rgba( 0, 0, 0, 1 ) 0%, transparent 5%, transparent 100% );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00ffffff, endColorstr=#ffffffff);
+}
+
+.white, .white * {
+  color: white;
+}
+.black {
+  color: black;
 }
