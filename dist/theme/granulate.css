@@ -15,7 +15,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #041148;
+  --r-background-color: #000;
+  --r-secondary-color: #5AFB12;
   --r-main-font: Montserrat, Source Sans Pro, Helvetica, sans-serif;
   --r-main-font-size: 42px;
   --r-main-color: #fff;
@@ -34,7 +35,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading3-size: 1.3em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #42affa;
+  --r-link-color: #5AFB12;
   --r-link-color-dark: #068de9;
   --r-link-color-hover: #8dcffc;
   --r-selection-background-color: #bee4fd;
@@ -42,7 +43,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 
 .reveal-viewport {
-  background: #041148;
   background-color: var(--r-background-color);
 }
 
@@ -359,7 +359,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   }
 }
 .secondary {
-  color: #f59218 !important;
+  color: var(--r-secondary-color) !important;
 }
 
 * {
@@ -373,6 +373,9 @@ a {
 body {
   margin: 0;
   padding: 0;
+  background-image: url('/img/storm.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #header {
@@ -383,9 +386,9 @@ body {
 }
 
 .logo {
-  width: 50px;
-  margin-top: 0.5rem;
-  margin-left: 2rem;
+  width: 150px;
+  bottom: 0.5rem;
+  left: 2rem;
   position: fixed;
 }
 
@@ -530,6 +533,15 @@ body.theme-dark .core-header .core-nav .btn-nav-menu.icon-menu {
   opacity: 0;
 }
 
+.matrix-network-animation {
+  z-index: -15;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  /* background-color: var(--r-background-color); */
+}
 .particle-network-animation {
   z-index: -10;
   position: absolute;
@@ -537,7 +549,6 @@ body.theme-dark .core-header .core-nav .btn-nav-menu.icon-menu {
   left: 0;
   right: 0;
   height: 100vh;
-  background-color: #041148;
 }
 .particle-network-animation::before {
   z-index: -2;
