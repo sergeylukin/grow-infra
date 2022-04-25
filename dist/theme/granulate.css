@@ -15,8 +15,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #000;
-  --r-secondary-color: #5AFB12;
+  --r-background-color: black;
   --r-main-font: Montserrat, Source Sans Pro, Helvetica, sans-serif;
   --r-main-font-size: 42px;
   --r-main-color: #fff;
@@ -35,7 +34,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading3-size: 1.3em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #5AFB12;
+  --r-link-color: #42affa;
   --r-link-color-dark: #068de9;
   --r-link-color-hover: #8dcffc;
   --r-selection-background-color: #bee4fd;
@@ -359,7 +358,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   }
 }
 .secondary {
-  color: var(--r-secondary-color) !important;
+  color: #f59218 !important;
 }
 
 * {
@@ -373,9 +372,6 @@ a {
 body {
   margin: 0;
   padding: 0;
-  background-image: url('/img/storm.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #header {
@@ -386,9 +382,9 @@ body {
 }
 
 .logo {
-  width: 150px;
-  bottom: 0.5rem;
-  left: 2rem;
+  width: 50px;
+  margin-top: 0.5rem;
+  margin-left: 2rem;
   position: fixed;
 }
 
@@ -533,15 +529,6 @@ body.theme-dark .core-header .core-nav .btn-nav-menu.icon-menu {
   opacity: 0;
 }
 
-.matrix-network-animation {
-  z-index: -15;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  /* background-color: var(--r-background-color); */
-}
 .particle-network-animation {
   z-index: -10;
   position: absolute;
@@ -549,6 +536,7 @@ body.theme-dark .core-header .core-nav .btn-nav-menu.icon-menu {
   left: 0;
   right: 0;
   height: 100vh;
+  background-color: var(--r-background-color);
 }
 .particle-network-animation::before {
   z-index: -2;
@@ -788,4 +776,23 @@ body.theme-dark .core-header .core-nav .btn-nav-menu.icon-menu {
   /* width: 90%; */
   /* height: auto; */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+}
+
+
+/* custom */
+.matrix-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 50%;
+  height: 100vh;
+  background: black;
+}
+.FadeAway{
+  z-index: -10;
+  position: absolute; top:0px; left:50%; width:100%; height:100%;
+  background:transparent;
+  background: linear-gradient(to right, rgba( 0, 0, 0, 1 ) 0%, transparent 5%, transparent 100% );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00ffffff, endColorstr=#ffffffff);
 }

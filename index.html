@@ -22,8 +22,10 @@
   </head>
   <body>
     <div class="reveal">
+      <div class="matrix-bg"></div>
       <div class="matrix-network-animation"></div>
       <div class="particle-network-animation"></div>
+      <div class="FadeAway"></div>
 
       <div id="header">
         <img class="logo" src="/img/logo.png" />
@@ -40,7 +42,10 @@
           <p class="">Infrastructure upgrade proposal</p>
           <small class="secondary">for scale and resilience</small>
         </section>
-        <section data-transition="zoom">
+        <section
+          data-transition="zoom"
+          data-background-color="rgba(127,255,212,.4)"
+        >
           <small>About me</small>
           <h3>Sergey Lukin</h3>
           <p>
@@ -52,7 +57,11 @@
           <p><small>ex AppOps engineer, Backend/Frontend engineer</small></p>
           <p><small>UI/UX/DS enthusiast</small></p>
         </section>
-        <section data-transition="zoom" data-transition-speed="slow">
+        <section
+          data-transition="zoom"
+          data-transition-speed="slow"
+          data-state="stats"
+        >
           <small class="secondary">What we'll cover</small>
           <h5><small>Design Systems buzzword</small></h5>
           <h5><small>A bit of history</small></h5>
